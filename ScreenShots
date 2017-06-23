@@ -11,7 +11,7 @@ public static String getRandomString(int length) {
 	@After
 	public void tearDown() throws Exception {
 		String fileName = getRandomString(10) + ".png";
-		String directory = "C:\\Users\\inty\\Desktop\\";
+		String directory = "C:\\Users\\xxx\\Desktop\\";
 		
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
