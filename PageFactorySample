@@ -1,0 +1,30 @@
+
+public class SearchPageFactory {
+	WebDriver driver;
+	
+	@FindBy(id="flight-destination")
+	WebElement destinationCity;
+	
+	@FindBy(id="flight-departing")
+	WebElement departureDate;
+	
+	@FindBy(id="flight-returning")
+	WebElement returnDate;
+    
+	//********************************************************
+	public SearchPageFactory(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	//********************************************************
+	
+	
+	public void setOriginCity(String origin) {
+		originCity.sendKeys(origin);
+	}
+	
+	public void setDestinationCity(String destination) {
+		destinationCity.sendKeys(destination);
+	}
+	
+}
