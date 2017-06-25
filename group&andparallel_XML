@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Group testng practise">
+
+	<test name="gorup test">
+		<parameter name="var" value="from parameter testing,test2sadddddddd"></parameter>
+		<parameter name="var2" value="from var2"></parameter>
+		<classes>
+			<class name="com.Automation.NewTest"></class>
+		</classes>
+	</test>
+</suite>
