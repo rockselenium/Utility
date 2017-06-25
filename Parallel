@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="parallel tesing practise" parallel="tests" thread-count="5">
+	<test name="TESTS_Parallel1">
+		<classes>
+			<class name="com.Automation.class1"></class>
+		</classes>
+
+	</test>
+	
+	
+	<test name="TESTS_Parallel2">
+		<classes>
+			<class name="com.Automation.class2"></class>
+		</classes>
+	</test>
+	
+	
+	<test name="TESTS_Parallel3">
+		<classes>
+			<class name="com.Automation.class3"></class>
+		</classes>
+	</test>
+	
+	
+	<test name="TESTS_Parallel4">
+		<classes>
+			<class name="com.Automation.class4"></class>
+		</classes>
+	</test>
+	
+</suite>
