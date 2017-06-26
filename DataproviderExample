@@ -1,0 +1,30 @@
+public class Dataproviderpractise {
+
+	@DataProvider(name = "dataprovide")
+	public Object[][] DP() {
+		return new Object[][] { 
+			{ "hello", "inty" }, 
+			{ "whats", "up" }, 
+		};
+}
+
+	@Test(dataProvider = "dataprovide")
+	@Parameters({ "a", "b" })
+
+	public void test(String a, String b) {
+		System.out.println(a + " " + b);
+	}
+}
+****************************************************
+****************************************************
+**********           XML             ***************
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DataProviderPractise">
+	<test name="TestData">
+		<classes>
+			<class name="com.Automation.Dataproviderpractise"></class>
+		</classes>
+	</test>
+</suite>
