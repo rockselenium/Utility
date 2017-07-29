@@ -1,19 +1,10 @@
-public static String getRandomString(int length) {
-		StringBuilder sb = new StringBuilder();
-		String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-		for (int i = 0; i < length; i++) {
-			int index = (int) (Math.random() * characters.length());
-			sb.append(characters.charAt(index));
-		}
-		return sb.toString();
+public class screenshothelper {
+
+	public void screenshotutil(WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		Random ran = new Random();
+		String name = ran.nextInt(50000) + ".png";
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(source, new File("C:\\Users\\xxx\\Desktop\\scrennshot\\" + name));
 	}
-	
-	@After
-	public void tearDown() throws Exception {
-		String fileName = getRandomString(10) + ".png";
-		String directory = "C:\\Users\\xxx\\Desktop\\";
-		
-		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(sourceFile, new File(directory + fileName));
-		driver.quit();
-	}
+}
